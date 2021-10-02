@@ -8,17 +8,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    id = params[:name]
-    user = User.find(name)
-    render plain: todo.to_pleasant_string
+    id = params[:id]
+    user = User.find(id)
+    render plain: user.to_pleasant_string
   end
 
   def create
     name = params[:name]
-    email = DateTime.parse(params[:email])
-    password = DateTime.parse(params[:password])
+    email = params[:email]
+    password = params[:password]
     new_user = User.create!(name: name, email: email, password: password)
-    response_text = "Hey, your new user is created with the id #{new_user.name} "
+    response_text = "Hey, your new user is created with the id #{new_user.id} and name #{new_user.name} "
     render plain: response_text
   end
 
