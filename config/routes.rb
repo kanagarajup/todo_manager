@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   # get "todos", to: "todos#index"
   # post "todos/create", to: "todos#create"
   #get "todos/:id", to: "todos#show"
-  post "users/create", to: "users#create"
+  #post "users/create", to: "users#create"
   resources :todos
-
   resources :users
 end

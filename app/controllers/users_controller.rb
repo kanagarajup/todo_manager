@@ -23,11 +23,11 @@ class UsersController < ApplicationController
   end
 
   def update
-    name = params[:name]
+    id = params[:id]
     password = params[:password]
-    todo = User.find(name)
-    user.password = completed
+    user = User.find(id)
+    user.password = password
     user.save!
-    render plain: "Updated password to #{name}"
+    render plain: "Updated password of user #{id}"
   end
 end
