@@ -30,4 +30,16 @@ class UsersController < ApplicationController
     user.save!
     render plain: "Updated password of user #{id}"
   end
+
+  def login
+    email1 = params[:email]
+    password1 = params[:password]
+    find_user = User.find_by(email: email1, password: password1)
+    if find_user == nil
+      result = false
+    else
+      result = true
+    end
+    render plain: result
+  end
 end
