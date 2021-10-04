@@ -32,8 +32,6 @@ class UsersController < ApplicationController
   end
 
   def login
-    email1 = params[:email]
-    password1 = params[:password]
     find_user = User.where("email = ? AND password = ?", params[:email], params[:password]).count
     if find_user == 0
       result = false
