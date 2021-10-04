@@ -32,12 +32,7 @@ class UsersController < ApplicationController
   end
 
   def login
-    find_user = User.where("email = ? AND password = ?", params[:email], params[:password]).count
-    if find_user == 0
-      result = false
-    else
-      result = true
-    end
-    render plain: result
+    user = User.find_by(email: params[:email], password: params[:password])
+    render plain: user.present?
   end
 end
