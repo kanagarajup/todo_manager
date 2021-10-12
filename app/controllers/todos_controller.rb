@@ -29,4 +29,9 @@ class TodosController < ApplicationController
     todo.save!
     render plain: "Updated todo completed status to #{completed}"
   end
+
+  def test
+    render "one/test.html"
+    # render "one/reset.css"
+  end
 end
