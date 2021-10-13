@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   margin-top: 60px;
 }
+
 .TodoPage-title {
   font-size: 30px;
   line-height: 1.6;
@@ -58,11 +59,16 @@ body {
 .TodoItem-delete-image {
   width: 16px;
   margin-left: 8px;
+  visibility: hidden;
+}
+.TodoItem:hover {
+  background-color: lightgray;
+  cursor: pointer;
 }
 .TodoItem-container:hover {
-  background-color: #f1edf7;
+  background-color: lightgray;
 }
-.TodoItem-container:hover .TOdoItem-delete {
+.TodoItem-container:hover .TodoItem-delete-image {
   visibility: visible;
 }
 .TodoItem-checkbox {
@@ -75,6 +81,7 @@ body {
   margin-bottom: 6px;
   color: #453c52;
 }
+
 .TodoSectionTitle {
   display: flex;
   color: #453c52;
@@ -89,12 +96,18 @@ body {
   color: #bfb8cc;
   margin-left: 8px;
 }
+h3 {
+  font-size: 24px;
+  line-height: 1.4;
+  color: #453c52;
+}
 .TodoSection-todo {
   font-size: 20px;
   line-height: 1.2;
   margin-left: 32px;
   color: #453c52;
 }
+
 .TodoSection {
   margin-bottom: 20px;
 }
